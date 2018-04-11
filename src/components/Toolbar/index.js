@@ -13,6 +13,7 @@ const HeadroomWrapper = styled(Headroom)`
     position: fixed;
     left: 0;
     right: 0;
+    top: 0;
     z-index: 5;
     transition: transform 200ms cubic-bezier(.14,.6,.36,1);
   }

@@ -37,7 +37,7 @@ const InnerContainer = styled.div`
   height: 100%;
   width: 100%;
   position: relative;
-  padding: ${spacing.big + 3}px 0;
+  ${'' /* padding-top: ${spacing.big + 3}px; */}
 `;
 
 // page component
