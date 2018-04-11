@@ -28,193 +28,8 @@ const Container = styled.div`
   overflow-x: hidden;
 `
 
-const Content = styled.div`
-  padding-bottom: 5rem;
 
-  blockquote {
-    font-style: italic;
-    width: 100%;
-    margin: 0;
-
-    p {
-      line-height: 1.3;
-      font-size: 3rem;
-    }
-
-  }
-
-  p img {
-    max-width: 100%;
-  }
-
-  p {
-    font-size: calc(0.3vw + 1.3rem);
-    margin: 0;
-  }
-
-  img {
-    margin: auto;
-  }
-
-  sup {
-    font-size: 1.4rem;
-    vertical-align: super;
-    margin-left: 1rem;
-  }
-
-  h1 {
-    text-transform: uppercase;
-    font-size: 4.5rem;
-    line-height: 1.2;
-    font-weight: normal;
-    margin: ${spacing.bigger}px 0 ${spacing.smaller}px;
-  }
-
-  h2 {
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-weight: normal;
-    margin-bottom: -${spacing.medium}px;
-  }
-
-  a {
-    text-decoration: underline;
-  }
-
-  .gatsby-resp-image-wrapper {
-    line-height: 0;
-    width: 150%;
-
-    max-width: none !important;
-    margin-left: -25% !important;
-  }
-
-  .gatsby-resp-image-background-image {
-    height: 0 !important;
-  }
-
-  .gatsby-resp-image-image {
-    height: auto !important;
-  }
-
-  @media screen and (max-width: ${breakpoints.tablet} ) {
-
-    .gatsby-resp-image-wrapper {
-      width: 100%;
-      margin-left: 0 !important;
-    }
-
-    h1 {
-      font-size: 3.5rem;
-    }
-
-    h2 {
-      font-size: 2.5rem;
-    }
-
-  }
-
-`
-
-const HeroImage = styled(Img)`
-  height: 70vh;
-  border-bottom: 1px solid black;
-`
-
-const ProjectHeader = styled.div `
-  padding: ${spacing.small}px;
-  width: 100%;
-  height: 30vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-bottom: 1px solid black;
-
-  h1 {
-    margin: 0;
-    line-height: 1;
-  }
-
-  h1, h3, h4, {
-    margin: 0;
-    line-height: 1;
-    vertical-align: bottom;
-  }
-
-  @media screen and (max-width: ${breakpoints.tablet} ) {
-
-    height: 100%;
-
-    h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-    }
-
-    justify-content: flex-start;
-  }
-
-`
-
-const ProjectInfo = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-
-  @media screen and (max-width: ${breakpoints.tablet} ) {
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
-`
-
-const GraduateName = styled.div`
-  width: 100%;
-  flex: 1;
-`
-
-const Categories = styled.div `
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  flex: 2;
-
-  h4 {
-    margin-left:${spacing.medium}px;
-  }
-
-  @media screen and (max-width: ${breakpoints.tablet} ) {
-    &:not(:first-child) {
-      display: none;
-    }
-  }
-`
-
-const ContentContainer = styled.div`
-
-`
-
-const InfoContainer = styled.div `
-    width: 100%;
-
-    @media screen and (max-width: ${breakpoints.tablet} ) {
-      width: 100%;
-    }
-`
-
-const Info = styled.div `
-  max-width: 800px;
-  width: 75%;
-
-  margin: ${spacing.bigger}px auto;
-  padding: ${spacing.smaller}px;
-  white-space: pre-wrap;
-
-  @media screen and (max-width: ${breakpoints.tablet} ) {
-    width: calc(100% - ${spacing.normal}px);
-  }
-`
-
-const RelatedProjects = styled.div `
+const RelatedProjects = styled.div`
   display: flex;
 
   @media screen and (max-width: ${breakpoints.tablet} ) {
@@ -226,7 +41,7 @@ const RelatedProjects = styled.div `
   }
 `
 
-const ProjectContainer = styled.div `
+const ProjectContainer = styled.div`
   border-left: 1px solid;
   margin-left: -1px;
   flex: 1;
@@ -248,13 +63,13 @@ const ProjectContainer = styled.div `
 
 `
 
-const ImageContainer = styled.div `
+const ImageContainer = styled.div`
   width: 100%;
   padding: 15%;
 
 `
 
-const TextContainer = styled.div `
+const TextContainer = styled.div`
   display: flex;
   padding: 0 ${spacing.small}px ${spacing.small}px ;
 
@@ -312,7 +127,6 @@ const RelatedText = styled.div`
   }
 `;
 
-
 // page template component
 export default function Post({ data }) {
   const project = data.markdownRemark;
@@ -323,44 +137,20 @@ export default function Post({ data }) {
 
       <Helmet title={`THE NEXT | ${project.frontmatter.title.toUpperCase()}`} />
 
-      <ProjectHeader>
+
 
         <h1>{project.frontmatter.title}</h1>
+        
+        <h4>{grad}</h4>
 
-        <ProjectInfo>
-          <GraduateName>
-            <Link to={`/graduates/${grad.replace(/[^0-9a-zA-Z\s'\-]+/g, "").replace(/[\'\s]+/g, "-").toLowerCase()}/`}>
-              <h4>{grad}</h4>
-            </Link>
-          </GraduateName>
+        {project.frontmatter.category && (
+          <h4>{project.frontmatter.category}</h4>
+        )}
 
-          <Categories>
-            {project.frontmatter.category && (
-              <h4>{project.frontmatter.category}</h4>
-            )}
+  
 
-            {project.frontmatter.category2 && (
-              <h4>{project.frontmatter.category2}</h4>
-            )}
+      <Img sizes={project.frontmatter.thumbnail.childImageSharp.sizes}/>
 
-            {project.frontmatter.category3 && (
-              <h4>{project.frontmatter.category3}</h4>
-            )}
-          </Categories>
-        </ProjectInfo>
-
-
-      </ProjectHeader>
-
-      <HeroImage sizes={project.frontmatter.image.childImageSharp.sizes}/>
-
-      <ContentContainer>
-        <InfoContainer>
-          <Info>
-              <Content dangerouslySetInnerHTML={{ __html: project.html }}/>
-          </Info>
-        </InfoContainer>
-      </ContentContainer>
 
       <BottomSection>
 
