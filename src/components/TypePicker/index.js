@@ -10,7 +10,7 @@ import VideoContent from '../VideoContent'
 const Container = styled.div`
   width: 80%;
   height:  100%;
-  margin-left: 30%;
+  margin-left: 20%;
 `
 
 // component

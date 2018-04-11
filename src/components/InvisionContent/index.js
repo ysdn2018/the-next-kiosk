@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import StatementHeader from '../StatementHeader'
+import StatementHeader from '../StatementHeader' 
 
 /*
   Base component
@@ -48,7 +48,25 @@ export default class InvisionContent extends React.Component{
     return false;
   }
 
+  componentDidMount() {
+    // var cssLink = document.createElement("link")
+    // cssLink.href = "./style.css";
+    // cssLink.rel = "stylesheet";
+    // // cssLink.type = "text/css";
+
+
+    // // window.frames['iframe1'].document.body.appendChild(cssLink);
+    
+
+    // setTimeout(() => {
+    //   console.log(this.iframe);
+
+    // }, 3000)
+    
+  }
+
   render() {
+
     return (
       <Container>
 
@@ -56,7 +74,7 @@ export default class InvisionContent extends React.Component{
           <p>LOADING THE NEXT PROJECT</p>
         </StatementContainer>
 
-        <Invision width="438" height="930" src={`//invis.io/${this.props.projectLink}`} autoplay frameBorder="0" />
+        <Invision id="iframe1" innerRef={el => this.iframe = el} width="438" height="930" src={`//invis.io/${this.props.projectLink}`} autoplay frameBorder="0" />
       </Container>
     )
   }
