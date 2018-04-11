@@ -28,7 +28,17 @@ const Container = styled.div`
   overflow-x: hidden;
 `
 
+const Header = styled.div`
+  
+`;
 
+
+
+
+
+
+
+/* BOTTOM STUFF */
 const RelatedProjects = styled.div`
   display: flex;
 
@@ -134,26 +144,25 @@ export default function Post({ data }) {
 
   return (
     <Container>
-
       <Helmet title={`THE NEXT | ${project.frontmatter.title.toUpperCase()}`} />
 
-
-
+      <Header>
         <h1>{project.frontmatter.title}</h1>
-        
+
         <h4>{grad}</h4>
 
         {project.frontmatter.category && (
           <h4>{project.frontmatter.category}</h4>
         )}
+      </Header>
 
-  
+      
+
 
       <Img sizes={project.frontmatter.thumbnail.childImageSharp.sizes}/>
 
 
       <BottomSection>
-
         <RelatedText>
           <h3>See more work like {project.frontmatter.title}</h3>
         </RelatedText>
