@@ -1,6 +1,6 @@
 ---
 templateKey: project
-name: Sean Laautenschlager
+name: Sean Lautenschlager
 title: Everbloom
 category: UX/UI
 thumbnail: ../thumbnails/sean_lauten.png
