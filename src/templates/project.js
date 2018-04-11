@@ -31,7 +31,7 @@ const Container = styled.div`
 `
 
 const InfoContainer = styled.div `
-  width: 20%;
+  width: 23%;
   height: 100%;
   border-right: 1px solid;
   margin: 0;
