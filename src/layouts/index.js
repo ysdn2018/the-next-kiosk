@@ -73,13 +73,10 @@ function TemplateWrapper(props) {
         ]}
       />
 
-      <Nav currentPage={location.pathname}/>
 
       <InnerContainer>
         {props.children()}
       </InnerContainer>
-
-      {location.pathname !== rootPath && <InfoDrawer />}
 
     </React.Fragment>
   )

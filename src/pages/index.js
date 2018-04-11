@@ -84,7 +84,7 @@ export default class Work extends React.Component {
       for (let category of projCategories) {
         if (category.indexOf(this.state.category) === -1 )
           return false
-      }
+        }
       return true;
     });
 
@@ -94,7 +94,11 @@ export default class Work extends React.Component {
     }));
 
 
-    console.log(this.props.data);
+    // for (let p of filteredSearch) {
+    //   console.log(p.node.frontmatter.name);
+    //   console.log(p.node.frontmatter.thumbnail.childImageSharp.sizes);
+      
+    // }
     
 
     return (
@@ -128,7 +132,7 @@ export default class Work extends React.Component {
           {filteredSearch.map(({ node: project }) => (
             <Project
               title={project.frontmatter.title}
-              // image={project.frontmatter.thumbnail.childImageSharp.sizes}
+              image={project.frontmatter.thumbnail.childImageSharp.sizes}
               path={project.fields.slug}
               graduate={project.frontmatter.name}
               key={project.id}
