@@ -6,6 +6,6 @@ category: Motion Design
 thumbnail: ../thumbnails/charlotte_lucas_cosmos.png
 intro: >-
   A trailer to Carl Sagan’s popular science book Cosmos (1980), that introduces the audience to Sagan’s fascinating and wonderful philosophies about astronomy and our place in the universe.
-project-link: ../video/charlotte_lucas_cosmos.mp4
+projectLink: ../video/charlotte_lucas_cosmos.mp4
 type: Video
 ---
