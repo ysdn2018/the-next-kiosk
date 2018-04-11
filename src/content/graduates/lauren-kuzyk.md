@@ -9,5 +9,5 @@ intro: >-
 
   This video was made to support Wave; a video game and mobile app for breaking communication barriers through the education of sign language.
 project-link: ../video/lauren_kuzyk.mp4
-Type: Video
+type: Video
 ---

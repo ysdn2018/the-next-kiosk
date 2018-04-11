@@ -7,5 +7,5 @@ thumbnail: ../thumbnails/jayme_kaplin.jpg
 intro: >-
   This trailer for a fictional orchestral concert has been lovingly hand drawn and animated frame by frame to resemble classic black and white cartoon shorts of the 1930s.
 project-link: ../video/jayme_kaplin.mp4
-Type: Video
+type: Video
 ---
