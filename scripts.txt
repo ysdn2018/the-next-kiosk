@@ -11,3 +11,5 @@ http://172.31.99.113:8000/
 sudo rm -rf .cache
 
 sudo rm -rf public
+
+sudo npm install -g gatsby-cli --unsafe-perm=true --allow-root
