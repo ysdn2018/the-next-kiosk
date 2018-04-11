@@ -5,3 +5,9 @@ http://172.31.99.113:8000/
 /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
 
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk http://localhost:9000
+
+
+
+sudo rm -rf .cache
+
+sudo rm -rf public
