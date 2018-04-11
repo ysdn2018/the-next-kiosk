@@ -42,6 +42,10 @@ const BackButton = styled.div `
   border-bottom: 1px solid;
   padding: 0 ${spacing.small}px;
 
+  h2 {
+    margin-bottom: 2px;
+  }
+
   &:hover {
     background-color: black;
     color: white;
@@ -68,6 +72,7 @@ const Description = styled.div `
   padding: ${spacing.small}px;
   font-size: 1.3em;
   line-height: 1.4;
+  white-space: pre-wrap;
 `
 
 ;
