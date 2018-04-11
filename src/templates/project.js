@@ -41,6 +41,12 @@ const BackButton = styled.div `
   width: 100%;
   border-bottom: 1px solid;
   padding: 0 ${spacing.small}px;
+
+  &:hover {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+  }
 `
 
 const Title = styled.div `
@@ -180,9 +186,12 @@ export default function Post({ data }) {
     <Container>
 
       <InfoContainer>
+
+        <Link to="/">
         <BackButton>
-          <h2>Back<Link to /></h2>
+          <h2>&larr;</h2>
         </BackButton>
+        </Link>
 
         <Title>
           <h1>{project.frontmatter.title}</h1>
