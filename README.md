@@ -69,3 +69,4 @@ More info about the whole process [here](https://www.gatsbyjs.org/docs/netlify-c
 Setup and examples of normal pages, and dynamic pages generated from markdown files (in src/pages/content).
 ### version 1.1.0
 Now comes with Netlify CMS installed.
+ 
