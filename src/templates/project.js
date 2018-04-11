@@ -208,9 +208,9 @@ export default function Post({ data }) {
       </InfoContainer>
 
       <TypePicker
-        title={project.title}
-        type={project.type}
-
+        type={project.frontmatter.type}
+        projectLink={project.frontmatter.projectLink}
+        projectList={project.frontmatter.list}
       />
 
       {/* <BottomSection>
@@ -273,6 +273,9 @@ export const aboutPageQuery = graphql`
         category
         intro
         type
+
+        projectLink
+        projectList
 
         thumbnail {
           childImageSharp {

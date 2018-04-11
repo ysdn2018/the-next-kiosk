@@ -93,11 +93,11 @@ export default class Work extends React.Component {
     }));
 
 
-    for (let p of filteredSearch) {
-      console.log(p.node.frontmatter.name);
-      console.log(p.node.frontmatter.thumbnail.childImageSharp.sizes);
+    // for (let p of filteredSearch) {
+    //   console.log(p.node.frontmatter.name);
+    //   console.log(p.node.frontmatter.thumbnail.childImageSharp.sizes);
 
-    }
+    // }
 
 
     return (

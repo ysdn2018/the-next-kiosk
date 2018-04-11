@@ -14,14 +14,16 @@ const Container = styled.div`
 
 // component
 function TypePicker(props) {
-  switch(props.type) {
-    case 'Invision':
+  console.log(props);
+  
+  switch(props.type.toLowerCase()) {
+    case 'invision':
       return <ImageContent {...props} />
-    case 'Website':
+    case 'website':
       return <InvisionContent {...props} />
-    case 'Image':
+    case 'image':
       return <WebsiteContent {...props} />
-    case 'Video':
+    case 'video':
       return <VideoContent {...props} />
     default:
       return null;

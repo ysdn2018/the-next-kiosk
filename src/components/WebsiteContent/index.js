@@ -9,7 +9,8 @@ import styled from 'styled-components'
 
 // styled components
 const Container = styled.div`
-
+  height: 100%;
+  width: 100%;
 `
 
 const Text = styled.p`
@@ -20,7 +21,7 @@ const Text = styled.p`
 export default function SearchField(props) {
   return (
     <Container>
-      <Text>{props.text}</Text>
+      <Text>website</Text>
     </Container>
   )
 }
