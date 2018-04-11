@@ -187,7 +187,6 @@ const Categories = styled.div `
       display: none;
     }
   }
-
 `
 
 const ContentContainer = styled.div`
@@ -430,13 +429,12 @@ export default function Post({ data }) {
 
 // template query
 export const aboutPageQuery = graphql`
-  query ProjectPage($slug: String!, $graduate: String!, $graduateName: String!, $category: String!, $category2: String!, $title: String!) {
+  query ProjectPage($slug: String!, $graduate: String!, $graduateName: String!, $category: String!, $title: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
         name
         category
-
 
         thumbnail {
           childImageSharp {
@@ -448,8 +446,7 @@ export const aboutPageQuery = graphql`
       }
     }
 
-  projectsInCategory: allMarkdownRemark(
-    filter: { frontmatter: { category: { regex: $category }, graduate: { ne: $graduateName }}}) {
+  projectsInCategory: allMarkdownRemark(filter: { frontmatter: { category: { regex: $category }, name: { ne: $graduateName }}}) {
       edges {
         node {
           fields {
@@ -473,7 +470,7 @@ export const aboutPageQuery = graphql`
 
 
   projectByStudent: allMarkdownRemark(
-    filter: { frontmatter: { graduate: { regex: $graduate }, title: { ne: $title }}}) {
+    filter: { frontmatter: { name: { regex: $graduate }, title: { ne: $title }}}) {
       edges {
         node {
           fields {
@@ -483,7 +480,7 @@ export const aboutPageQuery = graphql`
             title
             name
 
-            image {
+            thumbnail {
               childImageSharp {
                 sizes(maxWidth: 600, maxHeight: 400, quality: 90, cropFocus: CENTER) {
                   ...GatsbyImageSharpSizes
