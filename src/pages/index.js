@@ -5,6 +5,7 @@ import { spacing, breakpoints, shuffleArray } from '../utils/constants'
 
 import Project from '../components/Project'
 import SearchField from '../components/SearchField'
+import GridStatement from '../components/GridStatement'
 import Toolbar from '../components/Toolbar'
 import 'intersection-observer'
 
