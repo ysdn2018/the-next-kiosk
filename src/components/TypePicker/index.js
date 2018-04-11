@@ -8,16 +8,12 @@ import VideoContent from '../VideoContent'
 
 // styled components
 const Container = styled.div`
-
-`
-
-const Text = styled.p`
-
+  width: 100%;
+  height: 100%;
 `
 
 // component
-export default function SearchField(props) {
-  
+function TypePicker(props) {
   switch(props.type) {
     case 'Invision':
       return <ImageContent {...props} />
@@ -30,5 +26,12 @@ export default function SearchField(props) {
     default:
       return null;
   }
+}
 
+export default function TypePickerOuter(props) {
+  return (
+    <Container>
+      <TypePicker {...props} />
+    </Container>
+  )
 }
