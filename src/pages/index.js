@@ -94,12 +94,12 @@ export default class Work extends React.Component {
     }));
 
 
-    // for (let p of filteredSearch) {
-    //   console.log(p.node.frontmatter.name);
-    //   console.log(p.node.frontmatter.thumbnail.childImageSharp.sizes);
-      
-    // }
-    
+    for (let p of filteredSearch) {
+      console.log(p.node.frontmatter.name);
+      console.log(p.node.frontmatter.thumbnail.childImageSharp.sizes);
+
+    }
+
 
     return (
       <Container>
@@ -123,7 +123,7 @@ export default class Work extends React.Component {
         </Toolbar>
 
         <ProjectGrid>
-          <GridStatement 
+          <GridStatement
             work
             verb="Explore"
             noun="project"

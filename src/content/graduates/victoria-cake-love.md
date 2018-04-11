@@ -12,4 +12,5 @@ intro: >-
   behind this historic garden - much like the legacy left by my
   grandmother.
 project-link: ../video/victoria_cake_love.mov
+type: Video
 ---
