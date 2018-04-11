@@ -29,7 +29,7 @@ const Container = styled.div`
 `
 
 const Header = styled.div`
-  
+
 `;
 
 
@@ -156,7 +156,7 @@ export default function Post({ data }) {
         )}
       </Header>
 
-      
+
 
 
       <Img sizes={project.frontmatter.thumbnail.childImageSharp.sizes}/>
