@@ -33,11 +33,11 @@ export default function SearchField(props) {
   return (
     <Container {...props}>
       {props.projectLink && (
-          <Video src={"../" + props.projectLink} controls/>
+          <Video src={"../" + props.projectLink} controls autoPlay/>
       )}
 
       {props.videoOne && (
-          <Video src={"../" + props.videoOne} controls />
+          <Video src={"../" + props.videoOne} controls  autoPlay/>
       )}
 
       {props.videoTwo && (
