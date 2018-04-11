@@ -87,10 +87,10 @@ export default class Work extends React.Component {
       return true;
     });
 
-    const filteredSearch = shuffleArray(filteredCategory.filter(({ node: project }) => {
+    const filteredSearch = filteredCategory.filter(({ node: project }) => {
       return project.frontmatter.name.toLowerCase().indexOf(this.state.search) !== -1 ||
         project.frontmatter.title.toLowerCase().indexOf(this.state.search) !== -1;
-    }));
+    });
 
 
     // for (let p of filteredSearch) {
