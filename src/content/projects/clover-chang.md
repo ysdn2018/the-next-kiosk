@@ -6,6 +6,6 @@ category: UX/UI
 thumbnail: ../thumbnails/clover_chang.jpg
 intro: >-
   Petwork is an app designed specifically for a community of millennials pet owners, which encourages them to communicate and exchange pet care knowledge in the hope of transitioning a first-time pet owner to an experienced pet owner.
-project-link: https://invis.io/GK9138501442EN
+projectLink: https://invis.io/GK9138501442EN
 type: Invision
 ---

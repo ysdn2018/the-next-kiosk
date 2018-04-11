@@ -6,6 +6,7 @@ import Img from 'gatsby-image'
 import { spacing, breakpoints } from '../utils/constants'
 import Project from '../components/Project'
 import Statement from '../components/Statement'
+import TypePicker from '../components/TypePicker'
 import 'intersection-observer'
 
 function getRandom(arr, n) {
@@ -197,11 +198,11 @@ export default function Post({ data }) {
 
       </InfoContainer>
 
+      <TypePicker
+        title={project.title}
+        type={project.type}
 
-
-
-      <Img sizes={project.frontmatter.thumbnail.childImageSharp.sizes}/>
-
+      />
 
       {/* <BottomSection>
         <RelatedText>
@@ -262,6 +263,7 @@ export const aboutPageQuery = graphql`
         name
         category
         intro
+        type
 
         thumbnail {
           childImageSharp {

@@ -13,6 +13,9 @@ intro: >-
 
   Image 3: Manage Symptoms in Real Time: If the user experiences a symptom the app takes them through a sequence which asks them a few simple questions and provides them with some customized coping mechanisms to help them get through the episode.
 
-project-link: [../thumbnails/danielle_symple_1.gif, ../thumbnails/danielle_symple_2.gif, ../thumbnails/danielle_symple_3.gif]
+projectList: 
+  - ../thumbnails/danielle_symple_1.gif
+  - ../thumbnails/danielle_symple_2.gif
+  - ../thumbnails/danielle_symple_3.gif
 type: Image
 ---
