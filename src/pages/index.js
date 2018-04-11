@@ -19,7 +19,7 @@ const ProjectGrid = styled.div`
   padding: ${spacing.big + 2}px 0 0;
 
 
-  grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(550px, 2fr));
 
   @media (max-width: 813px) {
     grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
@@ -164,7 +164,7 @@ export const query = graphql`
 
             thumbnail {
               childImageSharp {
-                sizes(maxHeight: 300, maxWidth: 300, quality: 90, cropFocus: CENTER) {
+                sizes(maxHeight: 500, maxWidth: 500, quality: 90, cropFocus: CENTER) {
                   ...GatsbyImageSharpSizes
                 }
               }
