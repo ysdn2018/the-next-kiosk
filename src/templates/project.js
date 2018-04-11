@@ -166,7 +166,7 @@ export default function Post({ data }) {
               <Link to={otherProj.fields.slug}>
 
                 <ImageContainer>
-                  <Img sizes={otherProj.frontmatter.image.childImageSharp.sizes} />
+                  <Img sizes={otherProj.frontmatter.thumbnail.childImageSharp.sizes} />
                 </ImageContainer>
 
                 <TextContainer>
@@ -179,12 +179,12 @@ export default function Post({ data }) {
 
           )}
 
-          {data.projectsInCategory ? (getRandom(data.projectsInCategory.edges, 2).map(({ node: otherProj }) =>
+          {data.projectsInCategory && (getRandom(data.projectsInCategory.edges, 2).map(({ node: otherProj }) =>
             <ProjectContainer>
               <Link to={otherProj.fields.slug}>
 
                 <ImageContainer>
-                  <Img sizes={otherProj.frontmatter.image.childImageSharp.sizes} />
+                  <Img sizes={otherProj.frontmatter.thumbnail.childImageSharp.sizes} />
                 </ImageContainer>
 
                 <TextContainer>
@@ -193,20 +193,6 @@ export default function Post({ data }) {
                 </TextContainer>
               </Link>
             </ProjectContainer>
-          )) : (data.projectsInSecondCategory && data.projectsInSecondCategory.edges.map(({ node: otherProj }) =>
-              <ProjectContainer>
-                <Link to={otherProj.fields.slug}>
-
-                  <ImageContainer>
-                    <Img sizes={otherProj.frontmatter.image.childImageSharp.sizes} />
-                  </ImageContainer>
-
-                  <TextContainer>
-                    <Text>{otherProj.frontmatter.title.length > 15 ? (otherProj.frontmatter.title.slice(0, 15) + "…") : otherProj.frontmatter.title}</Text>
-                    <Text>{otherProj.frontmatter.graduate}</Text>
-                  </TextContainer>
-                </Link>
-              </ProjectContainer>
           ))}
         </RelatedProjects>
       </BottomSection>
