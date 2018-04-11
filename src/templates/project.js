@@ -25,118 +25,151 @@ function getRandom(arr, n) {
 
 // styled-components
 const Container = styled.div`
-  padding-bottom: ${spacing.bigger-4}px;
-  overflow-x: hidden;
-`
-
-const Header = styled.div`
-
-`;
-
-
-
-
-
-
-
-/* BOTTOM STUFF */
-const RelatedProjects = styled.div`
   display: flex;
-
-  @media screen and (max-width: ${breakpoints.tablet} ) {
-    flex-wrap: wrap;
-  }
-
-  @media screen and (max-width: ${breakpoints.mobile} ) {
-    display: block;
-  }
-`
-
-const ProjectContainer = styled.div`
-  border-left: 1px solid;
-  margin-left: -1px;
-  flex: 1;
-
-  @media screen and (max-width: ${breakpoints.tablet} ) {
-    &:last-child {
-      display: none;
-    }
-  }
-
-  @media screen and (max-width: ${breakpoints.mobile} ) {
-    ${'' /* width: 100%; */}
-    border-bottom: 1px solid black;
-
-    &:last-child {
-      display: block;
-    }
-  }
-
-`
-
-const ImageContainer = styled.div`
+  height: 100%;
   width: 100%;
-  padding: 15%;
-
 `
 
-const TextContainer = styled.div`
-  display: flex;
-  padding: 0 ${spacing.small}px ${spacing.small}px ;
+const InfoContainer = styled.div `
+  width: 30%;
+  height: 100%;
+  border-right: 1px solid;
+  margin: 0;
+`
 
+const BackButton = styled.div `
+  width: 100%;
+  border-bottom: 1px solid;
+  padding: 0 ${spacing.small}px;
+`
+
+const Title = styled.div `
+  padding: ${spacing.small}px;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
+  height: 25%;
+  border-bottom: 1px solid;
 `
 
-const Text = styled.p`
-  z-index: 4;
-  color: black;
-  max-width: 400px;
-
-  margin: 0.4rem;
-  font-size: 1.4rem;
-  line-height: 1.2;
-  width: 100%;
-
-&:first-of-type {
-  text-transform: uppercase;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  flex: 1;
-}
-
-&:last-of-type {
-  flex: 2;
-  text-align: right;
-}
-`
-
-const BottomSection = styled.div`
-
-`;
-
-const RelatedText = styled.div`
-  height: 130px;
+const Info = styled.div `
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  line-height: 1.3;
+  width: 100%;
+  justify-content: space-between;
+`
 
-  h3, h4 {
-    max-width: calc(100% - ${spacing.big}px);
-    text-align: center;
-    text-transform: none;
-  }
+const Description = styled.div `
+  padding: ${spacing.small}px;
+  font-size: 1.3em;
+  line-height: 1.4;
+`
 
-  @media screen and (max-width: ${breakpoints.mobile} ) {
-    h3 {
-      font-size: 2.2rem;
-    }
-  }
-`;
+;
+
+
+
+
+
+
+
+// /* BOTTOM STUFF */
+// const RelatedProjects = styled.div`
+//   display: flex;
+//
+//   @media screen and (max-width: ${breakpoints.tablet} ) {
+//     flex-wrap: wrap;
+//   }
+//
+//   @media screen and (max-width: ${breakpoints.mobile} ) {
+//     display: block;
+//   }
+// `
+//
+// const ProjectContainer = styled.div`
+//   border-left: 1px solid;
+//   margin-left: -1px;
+//   flex: 1;
+//
+//   @media screen and (max-width: ${breakpoints.tablet} ) {
+//     &:last-child {
+//       display: none;
+//     }
+//   }
+//
+//   @media screen and (max-width: ${breakpoints.mobile} ) {
+//     ${'' /* width: 100%; */}
+//     border-bottom: 1px solid black;
+//
+//     &:last-child {
+//       display: block;
+//     }
+//   }
+//
+// `
+//
+// const ImageContainer = styled.div`
+//   width: 100%;
+//   padding: 15%;
+//
+// `
+//
+// const TextContainer = styled.div`
+//   display: flex;
+//   padding: 0 ${spacing.small}px ${spacing.small}px ;
+//
+//   justify-content: space-between;
+//   align-items: flex-end;
+// `
+//
+// const Text = styled.p`
+//   z-index: 4;
+//   color: black;
+//   max-width: 400px;
+//
+//   margin: 0.4rem;
+//   font-size: 1.4rem;
+//   line-height: 1.2;
+//   width: 100%;
+//
+// &:first-of-type {
+//   text-transform: uppercase;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   flex: 1;
+// }
+//
+// &:last-of-type {
+//   flex: 2;
+//   text-align: right;
+// }
+// `
+//
+// const BottomSection = styled.div`
+//
+// `;
+//
+// const RelatedText = styled.div`
+//   height: 130px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   border-top: 1px solid black;
+//   border-bottom: 1px solid black;
+//   line-height: 1.3;
+//
+//   h3, h4 {
+//     max-width: calc(100% - ${spacing.big}px);
+//     text-align: center;
+//     text-transform: none;
+//   }
+//
+//   @media screen and (max-width: ${breakpoints.mobile} ) {
+//     h3 {
+//       font-size: 2.2rem;
+//     }
+//   }
+// `;
 
 // page template component
 export default function Post({ data }) {
@@ -145,25 +178,33 @@ export default function Post({ data }) {
 
   return (
     <Container>
-      <Helmet title={`THE NEXT | ${project.frontmatter.title.toUpperCase()}`} />
 
-      <Header>
-        <h1>{project.frontmatter.title}</h1>
+      <InfoContainer>
+        <BackButton>
+          <h2>Back<Link to /></h2>
+        </BackButton>
 
-        <h4>{grad}</h4>
+        <Title>
+          <h1>{project.frontmatter.title}</h1>
+          <Info>
+            <h3>{project.frontmatter.name}</h3>
+            {project.frontmatter.category && (
+              <h3>{project.frontmatter.category}</h3>
+            )}
+          </Info>
+        </Title>
 
-        {project.frontmatter.category && (
-          <h4>{project.frontmatter.category}</h4>
-        )}
-      </Header>
+        <Description>{project.frontmatter.intro}</Description>
 
-      <TypePicker 
+      </InfoContainer>
+
+      <TypePicker
         title={project.title}
         type={project.type}
 
       />
 
-      <BottomSection>
+      {/* <BottomSection>
         <RelatedText>
           <h3>See more work like {project.frontmatter.title}</h3>
         </RelatedText>
@@ -205,7 +246,7 @@ export default function Post({ data }) {
             </ProjectContainer>
           ))}
         </RelatedProjects>
-      </BottomSection>
+      </BottomSection> */}
 
 
     </Container>
@@ -221,6 +262,7 @@ export const aboutPageQuery = graphql`
         title
         name
         category
+        intro
         type
 
         thumbnail {
