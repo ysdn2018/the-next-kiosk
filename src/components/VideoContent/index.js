@@ -14,32 +14,34 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  flex-direction: column;
+
+  ${props => props.videoTwo && "height: auto;"}
 `
 
-const VideoContainer = styled.div`
-  width: 90%; 
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-
-`;
 
 const Video = styled.video`
-  width: 100%;
+  width: 90%;
   border: 1px solid black;
+
+  object-fit: contain;
+  margin: 10% 0;
 `
 
 // component
 export default function SearchField(props) {
   return (
-    <Container>
+    <Container {...props}>
       {props.projectLink && (
-        <VideoContainer>
           <Video src={"../" + props.projectLink} controls/>
-        </VideoContainer>
+      )}
+
+      {props.videoOne && (
+          <Video src={"../" + props.videoOne} controls />
+      )}
+
+      {props.videoTwo && (
+          <Video src={"../" + props.videoTwo} controls />
       )}
 
       

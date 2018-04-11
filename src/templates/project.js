@@ -35,6 +35,7 @@ const InfoContainer = styled.div `
   height: 100%;
   border-right: 1px solid;
   margin: 0;
+  position: fixed;
 `
 
 const BackButton = styled.div `
@@ -217,6 +218,7 @@ export default function Post({ data }) {
         type={project.frontmatter.type}
         projectLink={project.frontmatter.projectLink}
         projectList={project.frontmatter.list}
+        {...data.markdownRemark.frontmatter}
       />
 
       {/* <BottomSection>
@@ -281,10 +283,19 @@ export const aboutPageQuery = graphql`
         type
 
         projectLink
-        projectList {
-          text {
-            relativePath
-          }
+
+
+        videoOne
+        videoTwo
+
+        imageOne {
+          relativePath
+        }
+        imageTwo {
+          relativePath
+        }
+        imageThree {
+          relativePath
         }
 
         thumbnail {
