@@ -36,21 +36,13 @@ module.exports = {
        options: {
          plugins: [
            {
-             resolve: `gatsby-remark-images`,
-             options: {
-               maxWidth: 1500,
-               quality: 85,
-               linkImagesToOriginal: false,
-             },
-           },
-           {
              resolve: `gatsby-remark-responsive-iframe`,
              options: {
                wrapperStyle: `margin-bottom: 1.0725rem`,
              },
            },
            "gatsby-remark-external-links",
-           'gatsby-remark-copy-linked-files',
+ 
            'gatsby-remark-smartypants',
          ],
        },

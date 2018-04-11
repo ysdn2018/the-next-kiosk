@@ -17,11 +17,27 @@ const Text = styled.p`
 
 `
 
+const Image = styled.img`
+
+`
+
 // component
 export default function SearchField(props) {
   return (
     <Container>
-      <Text>image</Text>
+      {props.projectLink && (
+        <div>
+          <Image src={"../" + props.projectLink} />
+        </div>
+      )}
+
+      {props.projectList && props.projectList.map(({ image: text }) => {
+        <ImageContainer>
+          <Image src={"../" + image.relativePath} />
+        </ImageContainer>
+      })}
+      
+      
     </Container>
   )
 }

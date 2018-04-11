@@ -18,11 +18,11 @@ function TypePicker(props) {
   
   switch(props.type.toLowerCase()) {
     case 'invision':
-      return <ImageContent {...props} />
-    case 'website':
       return <InvisionContent {...props} />
-    case 'image':
+    case 'website':
       return <WebsiteContent {...props} />
+    case 'image':
+      return <ImageContent {...props} />
     case 'video':
       return <VideoContent {...props} />
     default:

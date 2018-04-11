@@ -14,8 +14,8 @@ intro: >-
   Image 3: Manage Symptoms in Real Time
 
 projectList:
-  - ../thumbnails/danielle_symple_1.gif
-  - ../thumbnails/danielle_symple_2.gif
-  - ../thumbnails/danielle_symple_3.gif
+  - text: ../thumbnails/danielle_symple_1.gif
+  - text: ../thumbnails/danielle_symple_2.gif
+  - text: ../thumbnails/danielle_symple_3.gif
 type: Image
 ---

@@ -213,6 +213,7 @@ export default function Post({ data }) {
       </InfoContainer>
 
       <TypePicker
+        title={project.frontmatter.title}
         type={project.frontmatter.type}
         projectLink={project.frontmatter.projectLink}
         projectList={project.frontmatter.list}
@@ -280,7 +281,11 @@ export const aboutPageQuery = graphql`
         type
 
         projectLink
-        projectList
+        projectList {
+          text {
+            relativePath
+          }
+        }
 
         thumbnail {
           childImageSharp {

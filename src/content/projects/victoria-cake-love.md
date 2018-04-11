@@ -11,6 +11,6 @@ intro: >-
   Allan Gardens Conservatory is because of the history and the legacy
   behind this historic garden - much like the legacy left by my
   grandmother.
-projectLink: ../video/victoria_cake_love.mov
+projectLink: ../video/victoria_cake_love.mp4
 type: Video
 ---

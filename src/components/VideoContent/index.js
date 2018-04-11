@@ -11,17 +11,38 @@ import styled from 'styled-components'
 const Container = styled.div`
   height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 `
 
-const Text = styled.p`
+const VideoContainer = styled.div`
+  width: 90%; 
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 
+`;
+
+const Video = styled.video`
+  width: 100%;
+  border: 1px solid black;
 `
 
 // component
 export default function SearchField(props) {
   return (
     <Container>
-      <Text>website</Text>
+      {props.projectLink && (
+        <VideoContainer>
+          <Video src={"../" + props.projectLink} controls/>
+        </VideoContainer>
+      )}
+
+      
     </Container>
   )
 }
