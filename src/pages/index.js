@@ -3,8 +3,6 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { spacing, breakpoints, shuffleArray } from '../utils/constants'
 
-import PageContainer from '../components/PageContainer'
-import GridStatement from '../components/GridStatement'
 import Project from '../components/Project'
 import SearchField from '../components/SearchField'
 import Toolbar from '../components/Toolbar'

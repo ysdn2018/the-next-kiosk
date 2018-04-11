@@ -5,8 +5,6 @@ import Helmet from 'react-helmet'
 import styled, { injectGlobal } from 'styled-components'
 import 'normalize.css'
 import { spacing, breakpoints } from '../utils/constants'
-import Nav from '../components/Nav'
-import InfoDrawer from '../components/InfoDrawer'
 import './index.css'
 
 import facebookCard from "../assets/images/facebook_card.png"
