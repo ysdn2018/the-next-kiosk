@@ -29,7 +29,8 @@ const Video = styled.video`
 `
 
 const VideoTwo = Video.extend`
-height: 50vh;
+height: 70vh;
+margin: 4% 0;
 `
 
 // component
