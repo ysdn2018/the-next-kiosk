@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import TwoImage from '../ImageTwo'
 import ImageContent from '../ImageContent'
 import InvisionContent from '../InvisionContent'
 import WebsiteContent from '../WebsiteContent'
@@ -24,6 +25,8 @@ function TypePicker(props) {
       return <WebsiteContent {...props} />
     case 'image':
       return <ImageContent {...props} />
+    case 'imagetwo':
+      return <TwoImage {...props} />
     case 'video':
       return <VideoContent {...props} />
     default:

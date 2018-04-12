@@ -10,6 +10,6 @@ intro: >-
   The Japanese poster attempts to oppose damaging, incorrect and ignorant stereotypes that appropriation often reinforces; in this case challenging a fetishized image of the docile, innocent Oriental woman. However, wearing clothing from another culture isn't inherently bad. The African and Indian poster demonstrates how respectful and equal cultural exchange can achieve mutual understanding as well as provide benefits to both groups.
   
 imageOne: ../thumbnails/kristen_chung_1.jpg
-ImageTwo: ../thumbnails/kristen_chung_2.jpg
-type: Image
+imageTwo: ../thumbnails/kristen_chung_3.jpg
+type: ImageTwo
 ---

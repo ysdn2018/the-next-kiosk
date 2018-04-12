@@ -28,6 +28,10 @@ const Video = styled.video`
   margin: 10% 0;
 `
 
+const VideoTwo = Video.extend`
+height: 50vh;
+`
+
 // component
 export default function SearchField(props) {
   return (
@@ -37,11 +41,11 @@ export default function SearchField(props) {
       )}
 
       {props.videoOne && (
-          <Video src={"../" + props.videoOne} controls  autoPlay/>
+          <VideoTwo src={"../" + props.videoOne} controls  autoPlay/>
       )}
 
       {props.videoTwo && (
-          <Video src={"../" + props.videoTwo} controls />
+          <VideoTwo src={"../" + props.videoTwo} controls />
       )}
 
       

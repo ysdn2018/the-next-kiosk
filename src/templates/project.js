@@ -291,6 +291,7 @@ export const aboutPageQuery = graphql`
         imageOne {
           relativePath
         }
+        
         imageTwo {
           relativePath
         }
